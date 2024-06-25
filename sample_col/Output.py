@@ -16,7 +16,7 @@ csv_headers = ['id', 'userId', 'url', 'createTime', 'ip', 'userAgent', 'requestT
 
 for collection_name in collection_names:
     #获取集合对象
-    collection = db["service_log_2024-06-24"]
+    collection = db["service_log_2024-06-25"]
 
     # 执行查询操作
     data = collection.find({"systemId": "1797644612455555073", 'userId': "步卓伦"},
@@ -29,7 +29,7 @@ for collection_name in collection_names:
                             'userId': 1})
 
     # 创建一个CSV文件并写入数据
-    with open('data/data_2024_06_24.csv', mode='w', newline='', encoding='utf-8') as file:
+    with open('data/data_2024_06_25.csv', mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow(csv_headers)
         for item in data:
